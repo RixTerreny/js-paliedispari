@@ -17,3 +17,37 @@ function palindromo (){
 btn.addEventListener("click", function(){
     palindromo();
 });
+
+
+//second part
+const btnPari = document.getElementById("btn-pari");
+
+function pariDispari(){
+    let numFinale = parseInt(num.value) + Math.floor(Math.random() * 10)
+    console.log(numFinale);
+    
+    let pari
+    if(numFinale % 2 == 0){
+        pari=true;
+    }
+    else{
+        pari=false;
+    }
+
+    if(pari == true && scelta.value == "pari"){
+        console.log("hai vinto");
+    }
+    else if(pari == false && scelta.value == "dispari"){
+        console.log("hai vinto");
+    }
+    else{
+        console.log("hai perso");
+    }   
+}
+
+btnPari.addEventListener("click", function(){
+    const num = document.getElementById("num");
+    const scelta = document.getElementById("scelta");
+    pariDispari();
+    console.log("");
+});
